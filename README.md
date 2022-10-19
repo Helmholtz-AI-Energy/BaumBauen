@@ -25,9 +25,9 @@ In order to set up the necessary environment:
    ```
    pip3 install -U pip
    ```
-4. Install the `BaumBauen` package  with:
+4. Install the `baumbauen` package  with:
    ```
-   cd /path/to/BaumBauen/repo
+   cd /path/to/baumbauen/repo
    pip install .
    ```
    or if you're doing development work and want code changes to be reflected in the installed package immediately:
@@ -64,7 +64,7 @@ When opening notebooks select `File > Jupytext > Pair Notebook with light Script
 ├── setup.py                <- Use `python setup.py develop` to install for development or
 |                              or create a distribution with `python setup.py bdist_wheel`.
 ├── src
-│   └── BaumBauen           <- Actual Python package where the main functionality goes.
+│   └── baumbauen           <- Actual Python package where the main functionality goes.
 ├── tests                   <- Unit tests which can be run with `py.test`.
 ├── .coveragerc             <- Configuration for coverage reports of unit tests.
 ├── .isort.cfg              <- Configuration for git hook that sorts imports.
