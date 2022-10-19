@@ -1,8 +1,6 @@
 # BaumBauen
 
-```
-This is where we really bauen the Baums
-```
+> This is where we really bauen the Baums
 
 This is the code for the paper [Learning tree structures from leaves for particle decay reconstruction](https://doi.org/10.1088/2632-2153/ac8de0).
 

@@ -1,0 +1,101 @@
+dataset:
+  # Select the data type, this decides which Dataset class to use
+  source: phasespace
+  phasespace:
+    known_path: null
+    unknown_path: null
+    config:
+      #seed: 42  # numpy random seed
+      #samples: 42  # Number of total samples to load in dataset
+      #samples_per_topology: 42  # Number of samples per topology to load
+      monitor_tag: 'Validation Known'  # Which dataset tag to monitor for e.g. checkpointing
+      apply_scaling: False  # Whether to apply preprocessing scaling to input features
+      scaling_dict: null
+      # You can provide scaling values yourself, otherwise these will be calculated from a subset of the training dataset
+      #scaling_dict:
+      #  mean: [0, 0, 0, 0]
+      #  std: [1, 1, 1, 1]
+  # You can select a subset of the datasets to load, it will handle zero padding for you
+  # For the belle data source this is an integer to load only the first N 
+  # files
+  #datasets:
+  num_classes: 8
+output:
+  # Top directory to save model, run_name as subdir and timestamp suffix
+  # will be added automatically
+  belle:
+    path: null
+    tensorboard: null
+  phasespace:
+    path: null
+    tensorboard: null
+  # Give a name to this config file's series of training
+  # Tensorboard logs will be saved in a subdir with that name to help 
+  # organise them
+  run_name: my_run_name
+train:
+  epochs: 10
+    # Number of batches to count as one epoch, useful if you have lots of samples
+    #steps: 1000
+  batch_size: 4
+  num_workers: 2
+  learning_rate: 1.e-3
+  # Whether to calculate class weights from dataset
+  class_weights: True
+  early_stop_patience: 10
+  optimiser: adam # sgd
+  learning_rate: 1.e-3
+  model: transformer_model # nri_model
+  mixed_precision: True
+  progress_bar: True
+  record_gpu_usage: False
+  include_efficiency: True
+  optuna:
+    active: True
+    loss: [focal, cross_entropy]
+    ntrials: 150
+    timeout: 172800
+    # One study for many trials
+    study_path: ./results/optuna/
+val:
+  # Interations to execute
+  #steps: 500
+  batch_size: 4
+  num_workers: 2
+transformer_model:
+  loss: cross_entropy
+  nattn: 1
+  nhead: 32
+  emb_dim: 512
+  dim_feedforward: 512
+  final_mlp_layers: 2
+  dropout: 0.3
+  transformer: default
+  bridge_method: concat
+  # Optuna hyperparameters to vary
+  # NOTE: These are ALL categorical
+  #optuna:
+  #  nattn: [1, 4]
+  #  nhead: [4, 8, 16, 32]
+  #  dim_feedforward: [64, 128, 256, 512]  # Includes emb_dim
+  #  final_mlp_layers: [2, 4]
+nri_model:
+  loss: focal
+  nblocks: 3
+  dim_feedforward: 128
+  initial_mlp_layers: 2
+  block_additional_mlp_layers: 2
+  final_mlp_layers: 2
+  dropout: 0.3
+  embedding_dims: 3 # Only used if features are tokenized
+  batchnorm: True
+  symmetrize: True
+  self_interaction: False
+  # Optuna hyperparameters to vary
+  # NOTE: These are ALL categorical
+  #optuna:
+  #  nblocks: [1, 4]
+  #  dim_feedforward: [128, 256, 512, 1024]
+  #  initial_mlp_layers: [2]
+  #  block_additional_mlp_layers: [2, 4]
+  #  final_mlp_layers: [2]
