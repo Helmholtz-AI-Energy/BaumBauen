@@ -32,6 +32,10 @@ In order to set up the necessary environment:
    ```
    pip install -e .
    ```
+5. (Optional) If you'd like to run the package tests then install `pytest`:
+   ```
+	 pip install pytest pytest-cov
+	 ```
 
 
 ## Usage
