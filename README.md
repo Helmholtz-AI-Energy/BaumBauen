@@ -84,7 +84,7 @@ This work is supported by the Helmholtz Association Initiative and Networking Fu
 the Bundesministerium für Bildung und Forschung (BMBF) under the grant 05H21PDKBA,
 and the L’Institut National de Physique Nucléaire et de Physique des Particules (IN2P3) du CNRS (France)
 and the French Agence Nationale de la Recherche (ANR) under grant ANR-21-CE31-0009 (project FIDDLE)
-and the Seed Money programme of Eucor – The European Campus.
+and the Seed Money programme of Eucor - The European Campus.
 We wish to also thank Julián Garcı́a Pardiñas and Isabelle Ripp-Baudot for the fruitful discussions.
 
 ## Citation
