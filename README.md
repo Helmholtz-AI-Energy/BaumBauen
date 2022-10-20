@@ -73,6 +73,41 @@ When opening notebooks select `File > Jupytext > Pair Notebook with light Script
 └── .pre-commit-config.yaml <- Configuration of pre-commit git hooks.
 ```
 
+## License
+
+This project is release under the 
+[BSD-3-Clause license](https://github.com/Helmholtz-AI-Energy/TBBRDet/blob/main/LICENSE)
+
+## Acknowledgement
+
+This work is supported by the Helmholtz Association Initiative and Networking Fund under the Helmholtz AI platform grant and the HAICORE@KIT partition,
+the Bundesministerium für Bildung und Forschung (BMBF) under the grant 05H21PDKBA,
+and the L’Institut National de Physique Nucléaire et de Physique des Particules (IN2P3) du CNRS (France)
+and the French Agence Nationale de la Recherche (ANR) under grant ANR-21-CE31-0009 (project FIDDLE)
+and the Seed Money programme of Eucor – The European Campus.
+We wish to also thank Julián Garcı́a Pardiñas and Isabelle Ripp-Baudot for the fruitful discussions.
+
+## Citation
+
+If you use this work in your research, please cite this project.
+```
+@article{kahnLearningTreeStructures2022a,
+    title = {Learning Tree Structures from Leaves for Particle Decay Reconstruction},
+    author = {Kahn, James and Tsaklidis, Ilias and Taubert, Oskar and Reuter, Lea and Dujany, Giulio and Boeckh, Tobias and Thaller, Arthur and Goldenzweig, Pablo and Bernlochner, Florian and Streit, Achim and G{\"o}tz, Markus},
+    year = {2022},
+    month = sep,
+    journal = {Machine Learning: Science and Technology},
+    volume = {3},
+    number = {3},
+    pages = {035012},
+    publisher = {{IOP Publishing}},
+    issn = {2632-2153},
+    doi = {10.1088/2632-2153/ac8de0},
+    langid = {english}
+}
+
+```
+
 ## Note
 
 This project has been set up using PyScaffold 3.2.3 and the [dsproject extension] 0.4.
