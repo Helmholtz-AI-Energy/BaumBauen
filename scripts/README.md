@@ -1,6 +1,6 @@
 # BaumBauen Scripts
 
-This is contains examples of scripts that call and run BaumBauen-related modules.
+This contains examples of scripts that call and run BaumBauen-related modules.
 
 ## Scripts organisation
 
