@@ -1,4 +1,4 @@
-# BaumBauen
+![BaumBauen](logos/baumbauen_logo.svg)
 
 > This is where we really bauen the Baums
 
