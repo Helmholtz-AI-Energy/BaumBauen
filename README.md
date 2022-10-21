@@ -1,4 +1,4 @@
-<div align="left">
+<div align="center">
   <img src="https://github.com/Helmholtz-AI-Energy/BaumBauen/blob/main/logos/baumbauen_logo.png" height="120px">
 </div>
 
