@@ -1,5 +1,8 @@
-![BaumBauen](logos/baumbauen_logo.svg)
+<div align="left">
+  <img src="https://github.com/Helmholtz-AI-Energy/BaumBauen/blob/main/logos/baumbauen_logo.png" height="120px">
+</div>
 
+---
 > This is where we really bauen the Baums
 
 This is the code for the paper [Learning tree structures from leaves for particle decay reconstruction](https://doi.org/10.1088/2632-2153/ac8de0).
